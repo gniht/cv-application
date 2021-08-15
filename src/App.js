@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
+import UserInput from './components/UserInput';
 
 function App() {
   return (
     <div className="App">
-      <GeneralInformation />
+      <UserInput labelName="Address"/>
+      {/* <GeneralInformation />
       <Education />
-      <PracticalExperience />      
+      <PracticalExperience />       */}
     </div>
   );
 }
