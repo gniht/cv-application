@@ -5,13 +5,24 @@ function UserInput(props){
   const [userInput, setUserInput] = useState("");
   const [acceptingInput, toggleAcceptingInput] = useState(true);
 
-  const inputElement = 
-    <input 
+  let inputElement;
+  if (props.textarea){
+    inputElement = 
+    <p>
+      <textarea
+        value={userInput} 
+        onChange={(e) => setUserInput(e.target.value)}
+      />
+    </p>
+  }else{
+    inputElement = <input 
       type="text" 
       name={props.labelName} 
       value={userInput} 
       onChange={(e) => setUserInput(e.target.value)}
-    />
+   /> 
+  }          
+
 
   const handleSave = () => {
     if(userInput){
@@ -21,15 +32,25 @@ function UserInput(props){
     }    
   }
 
+  const handleClear = () => {
+    setUserInput("");
+  }
+
+  const outputElement = (
+    props.textarea ? <p>{userInput}</p> : <span>{" " + userInput + " " }</span>
+  );
 
   return (
     <div>
       <label>
         {props.labelName}
-        {acceptingInput ? inputElement : <span>{" " + userInput + " " }</span>} 
+        {acceptingInput ? inputElement : outputElement} 
       </label>
       <button onClick={handleSave}>
         {acceptingInput ? "Save" : "Edit"}
+      </button>
+      <button onClick={handleClear}>
+        Clear
       </button>
       
     </div> 
