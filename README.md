@@ -14,9 +14,9 @@ I'm creating this as a practice exercise to learn more about React, so I will be
 
 3.  A section to add practical experience (company name, position title, main tasks of your jobs, date from and until when you worked for that company)
 
-#### Learning Goals
+4.  Buttons for editing/clearing all input fields.
 
-I want to: 
+#### Learning Goals 
 
 1.  Get better at building reusable components.
 
