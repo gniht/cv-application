@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
-import UserInput from './components/UserInput';
+import GeneralInformation from './components/GeneralInformation';
+import Education from './components/Education';
+import PracticalExperience from './components/PracticalExperience';
+import './index.css';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <UserInput labelName="Name" />
-      <UserInput labelName="Email"/>
-      <UserInput labelName="Address"/>
-      <UserInput labelName="About yourself" textarea={true}/>
-      {/* <GeneralInformation />
+    <div className="app">      
+      <GeneralInformation />
       <Education />
-      <PracticalExperience />       */}
+      <PracticalExperience />            
     </div>
   );
 }

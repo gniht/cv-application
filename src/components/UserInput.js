@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../index.css';
 
 function UserInput(props){
 
@@ -6,23 +7,23 @@ function UserInput(props){
   const [acceptingInput, toggleAcceptingInput] = useState(true);
 
   let inputElement;
-  if (props.textarea){
-    inputElement = 
-    <p>
-      <textarea
+  // assign inputElement based on whether the input is a textarea
+    if (props.textarea){
+      inputElement = 
+      <p>
+        <textarea
+          value={userInput} 
+          onChange={(e) => setUserInput(e.target.value)}
+        />
+      </p>
+    }else{
+      inputElement = <input 
+        type="text" 
+        name={props.labelName} 
         value={userInput} 
         onChange={(e) => setUserInput(e.target.value)}
-      />
-    </p>
-  }else{
-    inputElement = <input 
-      type="text" 
-      name={props.labelName} 
-      value={userInput} 
-      onChange={(e) => setUserInput(e.target.value)}
-   /> 
-  }          
-
+    /> 
+    }
 
   const handleSave = () => {
     if(userInput){
@@ -51,8 +52,7 @@ function UserInput(props){
       </button>
       <button onClick={handleClear}>
         Clear
-      </button>
-      
+      </button>      
     </div> 
   );
 }

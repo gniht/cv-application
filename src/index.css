@@ -1,4 +1,5 @@
 body {
+  background-color: cornflowerblue;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.card {
+  padding: 5px;
+  margin: 10px;   
+  border: 1px solid black;
+  
+  width: 50%;
+}
+
+div {  
+  background-color: cyan;  
+}
+.app {
+  background: darkgoldenrod;
+}
+button {
+  margin: 0 1px;
+}
+input{
+  margin: 0 0 0 5px;
 }
