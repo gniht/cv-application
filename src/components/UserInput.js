@@ -35,6 +35,7 @@ function UserInput(props){
 
   const handleClear = () => {
     setUserInput("");
+    toggleAcceptingInput(true);
   }
 
   const outputElement = (
